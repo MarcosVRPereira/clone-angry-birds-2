@@ -1,0 +1,15 @@
+{
+  "phase": 12,
+  "name": "Acessibilidade",
+  "status": "Planejamento concluído — Implementação pendente",
+  "objective": "Modo reduzido movimento, contraste, telas de leitura, atalhos de teclado.",
+  "tasks": [
+    "Modo reduzido movimento",
+    "Contraste, telas de leitura",
+    "Atalhos de teclado"
+  ],
+  "tests": "E2E de acessibilidade",
+  "context7": "Accessibility in web games, ARIA",
+  "recommendation": "Verificar que o jogo é navegável por teclado.",
+  "created": "2026-07-24"
+}

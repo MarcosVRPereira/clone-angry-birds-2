@@ -1,0 +1,16 @@
+{
+  "phase": 5,
+  "name": "Colisão & Dano",
+  "status": "Planejamento concluído — Implementação pendente",
+  "objective": "Detecção de impacto, cálculo de dano por material, destruição de blocos, vitória/derrota.",
+  "tasks": [
+    "Detecção de impacto",
+    "Cálculo de dano por material",
+    "Destruição de blocos",
+    "Vitória/derrota por inimigo"
+  ],
+  "tests": "Unit para cálculo de dano, E2E",
+  "context7": "Collision detection, damage calculation",
+  "recommendation": "Testar que dano é calculado corretamente por material.",
+  "created": "2026-07-24"
+}

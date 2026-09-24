@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "project": "Clone de Angry Birds 2",
+    "purpose": "Log de decisões estruturado para agentes consultarem.",
+    "human_readable": "decisions.md",
+    "created": "2026-07-24"
+  },
+  "decisions": [
+    {
+      "id": 1,
+      "topic": "Análise do Prompt Inicial",
+      "context": "Usuário forneceu prompt para criar clone de Angry Birds 2.",
+      "decisions": [
+        "Recomendação de física: Matter.js (vs Box2D).",
+        "Sugestões: pontuação/combos, condições de vitória/derrota, controles extras.",
+        "Riscos: ambiguidade de stack, dependência de internet, física caseira."
+      ]
+    },
+    {
+      "id": 2,
+      "topic": "Esclarecimento de Requisitos",
+      "context": "Usuário respondeu perguntas sobre stack e gameplay.",
+      "decisions": [
+        "Stack: TypeScript + Bun (nunca Node.js).",
+        "Renderização: WebGL (não WebGPU).",
+        "Engine: Phaser (2D).",
+        "Pássaros: ilimitados (como o original).",
+        "Fase 4: timer para concluir o nível.",
+        "Gameplay: OK para todas as sugestões (pontuação, combos).",
+        "Física: Matter.js ou Box2D → Matter.js recomendado.",
+        "Assets: baixar gratuitos; se não possível, gerar proceduralmente.",
+        "Estrutura: boas práticas (SOLID, DRY, Clean Code).",
+        "Testes: Playwright + unit tests."
+      ]
+    },
+    {
+      "id": 3,
+      "topic": "Esclarecimento de Stack e Gameplay",
+      "context": "Confirmação de stack e gameplay.",
+      "decisions": [
+        "2D (Phaser) confirmado.",
+        "WebGL confirmado.",
+        "Pássaros ilimitados confirmado.",
+        "Fase 4 = timer confirmado.",
+        "Sistema de pontuação/combos confirmado (incluir).",
+        "Física: Matter.js recomendado.",
+        "Assets: baixar gratuitos; criar ferramenta de pesquisa se necessário (Python/Rust).",
+        "Estrutura: seguir boas práticas.",
+        "Testes: Playwright + unit tests."
+      ]
+    },
+    {
+      "id": 4,
+      "topic": "Infraestrutura",
+      "context": "Decisões de infraestrutura e tooling.",
+      "decisions": [
+        "Runtime: 100% Bun (sem Node.js, nem compatibilidade).",
+        "Vercel: roda Bun nativamente (vercel.json).",
+        "Context7: usar para documentação atualizada; não insistir em erros.",
+        "Licença: incluir LICENSE (MIT).",
+        "Privacidade: COPPA + LGPD.",
+        "PWA: sim, mas para atualização futura.",
+        "Acessibilidade: sempre (PWA para futuro).",
+        "Tutorial mode: incluir.",
+        "Tela de aviso: antes da Splash Screen.",
+        "Favicon/ícones/manifest/Open Graph: incluir tudo."
+      ]
+    },
+    {
+      "id": 5,
+      "topic": "Testes e CI/CD",
+      "context": "Decisões de testes e CI/CD.",
+      "decisions": [
+        "Testes por fase: TDD, só commitar se testes passarem.",
+        "CI/CD: testes locais (Bun) como primário; GitHub Actions opcional (só se repo público).",
+        "2000 minutos: generoso para projeto pequeno; repo público = grátis.",
+        "Hooks: nativos do Git (sem Node).",
+        "Deploy: gratuito (local + opcional CI público)."
+      ]
+    },
+    {
+      "id": 6,
+      "topic": "Finais",
+      "context": "Decisões finais de repo, diretório e deploy.",
+      "decisions": [
+        "Repo: clone-angry-birds-2 (público desde o início).",
+        "Diretório: renomeado para clone-angry-birds-2.",
+        "Deploy: gratuito (local + opcional CI público).",
+        "Documentação: em ./docs (markdown para humanos + JSON para agentes)."
+      ]
+    }
+  ],
+  "stack": {
+    "runtime": "Bun",
+    "language": "TypeScript",
+    "rendering": "WebGL",
+    "engine": "Phaser",
+    "physics": "Matter.js",
+    "audio": "Howler.js",
+    "build": "Vite",
+    "test_unit": "Vitest",
+    "test_e2e": "Playwright",
+    "package_manager": "Bun"
+  },
+  "principles": [
+    "TDD por fase: testes antes de cada implementação. Só commitar se testes passarem.",
+    "Context7: consultar documentação atualizada para dúvidas técnicas. Não insistir em erros.",
+    "100% Bun: sem Node.js em nenhum script (build/test/dev).",
+    "Gratuito: testes locais (Bun) como primário. GitHub Actions só se repo público.",
+    "PT-BR: interface e documentação em português brasileiro.",
+    "Conventional Commits: regras de commit padronizadas.",
+    "Documentação progressiva: documentar cada tarefa concluída em ./docs."
+  ]
+}

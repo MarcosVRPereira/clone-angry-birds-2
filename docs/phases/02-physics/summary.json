@@ -1,0 +1,15 @@
+{
+  "phase": 2,
+  "name": "Física (Matter.js)",
+  "status": "Planejamento concluído — Implementação pendente",
+  "objective": "Mundo Matter.js integrado ao Phaser, gravidade, colisões e eventos.",
+  "tasks": [
+    "Mundo Matter.js integrado ao Phaser",
+    "Gravidade, colisões, collision masks",
+    "Eventos de colisão"
+  ],
+  "tests": "Unit para colisões, gravidade",
+  "context7": "Matter.js integration with Phaser",
+  "recommendation": "Testar que a física é estável (sem tunneling).",
+  "created": "2026-07-24"
+}

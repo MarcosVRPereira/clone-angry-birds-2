@@ -1,0 +1,15 @@
+{
+  "phase": 13,
+  "name": "PWA & Responsividade",
+  "status": "Planejamento concluído — Implementação pendente",
+  "objective": "Manifest, ícones, service worker, responsivo (horizontal → vertical), favicon, Open Graph.",
+  "tasks": [
+    "Manifest, ícones, service worker",
+    "Responsivo (horizontal → vertical)",
+    "Favicon, Open Graph"
+  ],
+  "tests": "E2E responsivo, PWA install",
+  "context7": "PWA setup, responsive design",
+  "recommendation": "Testar install e offline.",
+  "created": "2026-07-24"
+}

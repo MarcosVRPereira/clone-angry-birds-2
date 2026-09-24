@@ -1,0 +1,16 @@
+{
+  "phase": 4,
+  "name": "Entidades",
+  "status": "Planejamento concluído — Implementação pendente",
+  "objective": "Pássaros (ilimitados), blocos/estruturas, inimigos, pool de objetos.",
+  "tasks": [
+    "Pássaros (ilimitados)",
+    "Blocos/estruturas (madeira, concreto, vidro)",
+    "Inimigos (porcos/alvos)",
+    "Pool de objetos"
+  ],
+  "tests": "Unit para spawn/destruição, E2E",
+  "context7": "Entity pooling, component patterns",
+  "recommendation": "Testar que entidades spawnam e destroem corretamente.",
+  "created": "2026-07-24"
+}

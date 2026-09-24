@@ -1,0 +1,14 @@
+{
+  "phase": 11,
+  "name": "Partículas & Efeitos",
+  "status": "Planejamento concluído — Implementação pendente",
+  "objective": "Efeitos de destruição, trails, juice.",
+  "tasks": [
+    "Efeitos de destruição",
+    "Trails, juice"
+  ],
+  "tests": "E2E visual",
+  "context7": "Particle systems, visual effects",
+  "recommendation": "Verificar que efeitos não quebram o jogo.",
+  "created": "2026-07-24"
+}

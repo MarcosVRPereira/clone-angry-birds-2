@@ -1,0 +1,22 @@
+{
+  "phase": 0,
+  "name": "Setup & Tooling",
+  "status": "Planejamento concluído — Implementação pendente",
+  "objective": "Inicializar o projeto com todas as ferramentas e configurações necessárias, seguindo boas práticas.",
+  "tasks": [
+    "Inicializar projeto (Vite + TS + Bun)",
+    "package.json com scripts via bun run",
+    "Config: TS, ESLint, Prettier, Vitest",
+    "Estrutura de pastas",
+    "Git init + hooks nativos (.git/hooks, sem Node)",
+    "LICENSE (MIT)",
+    "Regras de commit (Conventional Commits)"
+  ],
+  "context7": "Vite+TS+Bun, ESLint, estrutura de pastas",
+  "recommendation": "Validar que bun run dev roda antes de prosseguir para a Fase 1.",
+  "docs": {
+    "human_readable": "README.md",
+    "structured": "summary.json"
+  },
+  "created": "2026-07-24"
+}

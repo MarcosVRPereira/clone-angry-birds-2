@@ -1,0 +1,16 @@
+{
+  "phase": 7,
+  "name": "Pontuação & HUD",
+  "status": "Planejamento concluído — Implementação pendente",
+  "objective": "Score, combos, multiplicadores, condições de vitória/derrota, timer, HUD.",
+  "tasks": [
+    "Score, combos, multiplicadores",
+    "Condições de vitória/derrota",
+    "Timer (Fase 4)",
+    "HUD: score, timer, pássaros"
+  ],
+  "tests": "Unit para scoring, E2E para vitória/derrota",
+  "context7": "Scoring systems, HUD patterns",
+  "recommendation": "Testar que pontuação e timer funcionam corretamente.",
+  "created": "2026-07-24"
+}

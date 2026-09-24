@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "project": "Clone de Angry Birds 2",
+    "repo": "github.com/MarcosVRPereira/clone-angry-birds-2",
+    "created": "2026-07-24",
+    "status": "Planejamento concluído — Implementação pendente (Fase 0 em diante)",
+    "human_readable": "ROADMAP.md"
+  },
+  "stack": {
+    "runtime": "Bun",
+    "language": "TypeScript",
+    "rendering": "WebGL",
+    "engine": "Phaser",
+    "physics": "Matter.js",
+    "audio": "Howler.js",
+    "build": "Vite",
+    "test_unit": "Vitest",
+    "test_e2e": "Playwright",
+    "package_manager": "Bun"
+  },
+  "principles": [
+    "TDD por fase: testes antes de cada implementação. Só commitar se testes passarem.",
+    "Context7: consultar documentação atualizada para dúvidas técnicas. Não insistir em erros.",
+    "100% Bun: sem Node.js em nenhum script (build/test/dev).",
+    "Gratuito: testes locais (Bun) como primário. GitHub Actions só se repo público.",
+    "PT-BR: interface e documentação em português brasileiro.",
+    "Conventional Commits: regras de commit padronizadas.",
+    "Documentação progressiva: documentar cada tarefa concluída em ./docs."
+  ],
+  "phases": [
+    {
+      "id": 0,
+      "name": "Setup & Tooling",
+      "tasks": [
+        "Inicializar projeto (Vite + TS + Bun)",
+        "package.json com scripts via bun run",
+        "Config: TS, ESLint, Prettier, Vitest",
+        "Estrutura de pastas",
+        "Git init + hooks nativos (.git/hooks, sem Node)",
+        "LICENSE (MIT)",
+        "Regras de commit (Conventional Commits)"
+      ],
+      "context7": "Vite+TS+Bun, ESLint, estrutura de pastas",
+      "recommendation": "Validar que bun run dev roda antes de prosseguir",
+      "docs": "docs/phases/00-setup/README.md + docs/phases/00-setup/summary.json"
+    },
+    {
+      "id": 1,
+      "name": "Core Engine",
+      "tasks": [
+        "Bootstrap, cena principal, loop de render (WebGL)",
+        "Input: mouse, touch, teclado",
+        "Estado do jogo (State Machine)"
+      ],
+      "tests": "unit para state machine, input",
+      "context7": "Phaser scene setup, WebGL rendering loop",
+      "recommendation": "Testar que o loop renderiza sem crashar"
+    },
+    {
+      "id": 2,
+      "name": "Física (Matter.js)",
+      "tasks": [
+        "Mundo Matter.js integrado ao Phaser",
+        "Gravidade, colisões, collision masks",
+        "Eventos de colisão"
+      ],
+      "tests": "unit para colisões, gravidade",
+      "context7": "Matter.js integration with Phaser",
+      "recommendation": "Testar que a física é estável (sem tunneling)"
+    },
+    {
+      "id": 3,
+      "name": "Slingshot (gameplay central)",
+      "tasks": [
+        "Mecânica de arrastar/alisar (força + ângulo)",
+        "Lançamento do pássaro",
+        "Feedback visual de trajetória"
+      ],
+      "tests": "unit para cálculo de força/ângulo, E2E para arrastar/lançar",
+      "context7": "slingshot mechanics, drag-to-aim UI",
+      "recommendation": "Testar que o lançamento voa na direção correta"
+    },
+    {
+      "id": 4,
+      "name": "Entidades",
+      "tasks": [
+        "Pássaros (ilimitados)",
+        "Blocos/estruturas (madeira, concreto, vidro)",
+        "Inimigos (porcos/alvos)",
+        "Pool de objetos"
+      ],
+      "tests": "unit para spawn/destruição, E2E",
+      "context7": "entity pooling, component patterns",
+      "recommendation": "Testar que entidades spawnam e destroem corretamente"
+    },
+    {
+      "id": 5,
+      "name": "Colisão & Dano",
+      "tasks": [
+        "Detecção de impacto",
+        "Cálculo de dano por material",
+        "Destruição de blocos",
+        "Vitória/derrota por inimigo"
+      ],
+      "tests": "unit para cálculo de dano, E2E",
+      "context7": "collision detection, damage calculation",
+      "recommendation": "Testar que dano é calculado corretamente por material"
+    },
+    {
+      "id": 6,
+      "name": "Sistema de Níveis",
+      "tasks": [
+        "Dados de nível (JSON)",
+        "5 fases com layouts",
+        "Dificuldade progressiva",
+        "Fase 4 com timer"
+      ],
+      "tests": "unit para loading/validação, E2E por fase",
+      "context7": "level data structure, JSON-based levels",
+      "recommendation": "Testar que todos os 5 níveis carregam e são jogáveis"
+    },
+    {
+      "id": 7,
+      "name": "Pontuação & HUD",
+      "tasks": [
+        "Score, combos, multiplicadores",
+        "Condições de vitória/derrota",
+        "Timer (Fase 4)",
+        "HUD: score, timer, pássaros"
+      ],
+      "tests": "unit para scoring, E2E para vitória/derrota",
+      "context7": "scoring systems, HUD patterns",
+      "recommendation": "Testar que pontuação e timer funcionam corretamente"
+    },
+    {
+      "id": 8,
+      "name": "UI & Menus",
+      "tasks": [
+        "Menu principal, seleção de nível",
+        "Telas de vitória/derrota",
+        "Configurações (som)",
+        "Tela de aviso (antes da Splash)",
+        "Tutorial mode"
+      ],
+      "tests": "E2E para navegação de menus",
+      "context7": "UI state management, menu patterns",
+      "recommendation": "Testar que todos os menus navegam corretamente"
+    },
+    {
+      "id": 9,
+      "name": "Áudio (Howler.js)",
+      "tasks": [
+        "Efeitos sonoros",
+        "Gerenciador de áudio"
+      ],
+      "tests": "E2E para verificação de sons",
+      "context7": "Howler.js audio management",
+      "recommendation": "Testar que sons tocam nos eventos corretos"
+    },
+    {
+      "id": 10,
+      "name": "Assets",
+      "tasks": [
+        "Baixar sprites gratuitos (Python/Rust) ou gerar proceduralmente",
+        "Sons + organização"
+      ],
+      "tests": "verificar carregamento de assets",
+      "context7": "asset loading, sprite optimization",
+      "recommendation": "Validar que todos os assets carregam sem erros"
+    },
+    {
+      "id": 11,
+      "name": "Partículas & Efeitos",
+      "tasks": [
+        "Efeitos de destruição",
+        "Trails, juice"
+      ],
+      "tests": "E2E visual",
+      "context7": "particle systems, visual effects",
+      "recommendation": "Verificar que efeitos não quebram o jogo"
+    },
+    {
+      "id": 12,
+      "name": "Acessibilidade",
+      "tasks": [
+        "Modo reduzido movimento",
+        "Contraste, telas de leitura",
+        "Atalhos de teclado"
+      ],
+      "tests": "E2E de acessibilidade",
+      "context7": "accessibility in web games, ARIA",
+      "recommendation": "Verificar que o jogo é navegável por teclado"
+    },
+    {
+      "id": 13,
+      "name": "PWA & Responsividade",
+      "tasks": [
+        "Manifest, ícones, service worker",
+        "Responsivo (horizontal → vertical)",
+        "Favicon, Open Graph"
+      ],
+      "tests": "E2E responsivo, PWA install",
+      "context7": "PWA setup, responsive design",
+      "recommendation": "Testar install e offline"
+    },
+    {
+      "id": 14,
+      "name": "Testes & Docs Finais",
+      "tasks": [
+        "Revisão completa de testes",
+        "README, docs de arquitetura e níveis",
+        "Configuração de deploy (gratuito)"
+      ],
+      "tests": "E2E completo, cross-browser",
+      "context7": "deployment, documentation best practices",
+      "recommendation": "Testar deploy e jogabilidade completa"
+    }
+  ],
+  "deploy": {
+    "local_tests": "Grátis (primário)",
+    "github_actions_public": "Grátis (ilimitado)",
+    "github_actions_private": "2000 min/mês grátis, depois ~$0.008/min",
+    "vercel": "Free tier (roda Bun nativamente)",
+    "netlify": "Free tier",
+    "github_pages": "Grátis (repos públicos)"
+  },
+  "next_steps": [
+    "Repo criado: github.com/MarcosVRPereira/clone-angry-birds-2 (público)",
+    "Diretório renomeado para clone-angry-birds-2",
+    "Aguardando início da Fase 0 (implementação)"
+  ]
+}

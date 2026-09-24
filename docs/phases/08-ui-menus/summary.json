@@ -1,0 +1,17 @@
+{
+  "phase": 8,
+  "name": "UI & Menus",
+  "status": "Planejamento concluído — Implementação pendente",
+  "objective": "Menu principal, seleção de nível, telas de vitória/derrota, configurações, tela de aviso, tutorial mode.",
+  "tasks": [
+    "Menu principal, seleção de nível",
+    "Telas de vitória/derrota",
+    "Configurações (som)",
+    "Tela de aviso (antes da Splash)",
+    "Tutorial mode"
+  ],
+  "tests": "E2E para navegação de menus",
+  "context7": "UI state management, menu patterns",
+  "recommendation": "Testar que todos os menus navegam corretamente.",
+  "created": "2026-07-24"
+}

@@ -1,0 +1,14 @@
+{
+  "phase": 9,
+  "name": "Áudio (Howler.js)",
+  "status": "Planejamento concluído — Implementação pendente",
+  "objective": "Efeitos sonoros, gerenciador de áudio.",
+  "tasks": [
+    "Efeitos sonoros",
+    "Gerenciador de áudio"
+  ],
+  "tests": "E2E para verificação de sons",
+  "context7": "Howler.js audio management",
+  "recommendation": "Testar que sons tocam nos eventos corretos.",
+  "created": "2026-07-24"
+}

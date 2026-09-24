@@ -1,0 +1,16 @@
+{
+  "phase": 6,
+  "name": "Sistema de Níveis",
+  "status": "Planejamento concluído — Implementação pendente",
+  "objective": "Dados de nível (JSON), 5 fases com layouts, dificuldade progressiva, fase 4 com timer.",
+  "tasks": [
+    "Dados de nível (JSON)",
+    "5 fases com layouts",
+    "Dificuldade progressiva",
+    "Fase 4 com timer"
+  ],
+  "tests": "Unit para loading/validação, E2E por fase",
+  "context7": "Level data structure, JSON-based levels",
+  "recommendation": "Testar que todos os 5 níveis carregam e são jogáveis.",
+  "created": "2026-07-24"
+}

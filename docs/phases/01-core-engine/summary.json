@@ -1,0 +1,15 @@
+{
+  "phase": 1,
+  "name": "Core Engine",
+  "status": "Planejamento concluído — Implementação pendente",
+  "objective": "Bootstrap do jogo, cena principal, loop de render (WebGL), input e estado do jogo.",
+  "tasks": [
+    "Bootstrap, cena principal, loop de render (WebGL)",
+    "Input: mouse, touch, teclado",
+    "Estado do jogo (State Machine)"
+  ],
+  "tests": "Unit para state machine, input",
+  "context7": "Phaser scene setup, WebGL rendering loop",
+  "recommendation": "Testar que o loop renderiza sem crashar.",
+  "created": "2026-07-24"
+}

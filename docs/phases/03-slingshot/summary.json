@@ -1,0 +1,15 @@
+{
+  "phase": 3,
+  "name": "Slingshot (gameplay central)",
+  "status": "Planejamento concluído — Implementação pendente",
+  "objective": "Mecânica de arrastar/alisar (força + ângulo), lançamento do pássaro, feedback visual.",
+  "tasks": [
+    "Mecânica de arrastar/alisar (força + ângulo)",
+    "Lançamento do pássaro",
+    "Feedback visual de trajetória"
+  ],
+  "tests": "Unit para cálculo de força/ângulo, E2E para arrastar/lançar",
+  "context7": "slingshot mechanics, drag-to-aim UI",
+  "recommendation": "Testar que o lançamento voa na direção correta.",
+  "created": "2026-07-24"
+}
